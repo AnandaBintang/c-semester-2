@@ -21,7 +21,6 @@ void edit_data();
 
 int main()
 {
-    // Initialize with 2 static students (IPK 4.00 and 2.00)
     strcpy(mahasiswa[0].nim, "1234567890");
     strcpy(mahasiswa[0].nama, "Agung Jaya");
     strcpy(mahasiswa[0].alamat, "Jl. Sudirman No. 1");
@@ -109,7 +108,7 @@ void masukkan_data(int n)
         printf("NIM: ");
         scanf("%s", mahasiswa[jumlah_mahasiswa + i].nim);
         printf("Nama: ");
-        scanf(" %[^\n]", mahasiswa[jumlah_mahasiswa + i].nama); // Use scanf with %[^\n] to read names with spaces
+        scanf(" %[^\n]", mahasiswa[jumlah_mahasiswa + i].nama);
         printf("Alamat: ");
         scanf(" %[^\n]", mahasiswa[jumlah_mahasiswa + i].alamat);
         printf("IPK: ");
@@ -127,7 +126,7 @@ void lihat_data_ipk_rendah()
         return;
     }
 
-    int flag = 0; // Flag to indicate if there are students with IPK < 3.00
+    int flag = 0;
 
     printf("\nData mahasiswa dengan IPK < 3.00:\n");
     for (int i = 0; i < jumlah_mahasiswa; i++)
