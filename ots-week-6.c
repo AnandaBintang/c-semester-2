@@ -1,8 +1,7 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
+#include <stdio.h>   // input output
+#include <stdbool.h> // boolean
 
-#define MAX 10
+#define MAX 10 // 0 - 9
 
 typedef struct
 {
@@ -23,7 +22,7 @@ bool isEmpty(Queue *queue)
 
 bool isFull(Queue *queue)
 {
-    return queue->rear == MAX - 1;
+    return queue->rear == MAX - 1; // 10 - 1
 }
 
 char *checkPatientSeverity(int patient)
@@ -58,9 +57,9 @@ void enqueue(Queue *queue, int patient)
 
 int main()
 {
-    Queue queue;
-    int patient[10];
-    init(&queue);
+    Queue queue;     // queue
+    int patient[10]; // array pasien
+    init(&queue);    // inisialisasi queue
 
     scanf("%d %d %d %d %d %d %d %d %d %d", &patient[0], &patient[1], &patient[2], &patient[3], &patient[4], &patient[5], &patient[6], &patient[7], &patient[8], &patient[9]);
 
